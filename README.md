@@ -1,5 +1,5 @@
 # fetalPhaseEPI
-Tools for phase unwrapping based 4D distortion correction for EPI applied to fetal MRI
+Tools for phase unwrapping based 3D+T distortion correction for EPI applied to fetal MRI
 
 This repository provides tools to perform distortion correction of EPI as described in the manuscript ''The developing Human Connectome Project fetal functional MRI release: Methods and data structures'', VR Karolis, L Cordero-Grande, AN Price, E Hughes, SP Fitzgibbon, V Kyriakopoulou, A Uus, N Harper, D Prokopenko, D Bridglal, J Willers Moore, S Wilson, M Pietsch, D Christiaens, M Deprez, L Williams, E Robinson, A Makropoulos, S-R Farahibozorg, J O'Muircheartaigh, MA Rutherford, D Rueckert, AD Edwards, T Arichi, SM Smith, E Duff, and JV Hajnal, biorXiv:doi.org/10.1101/2024.06.13.598863
 
@@ -17,7 +17,7 @@ from  https://www.mathworks.com/matlabcentral/fileexchange/39664-subtightplot
 ###### ./Utils
 contains functions that replace, extend or adapt some MATLAB built-in functions and implement generic methods: *aplGPU.m*, *blockGPU.m*, *build1DFTM.m*, *buildDFTM.m*, *buildFilter.m*, *buildStandardDFTM.m*, *dynInd.m*, *fctGPU.m*, *fftGPU.m*, *filtering.m*, *generateGrid.m*, *ifctGPU.m*, *ifftGPU.m*, *mapMat.m*, *matfun.m*, *mirroring.m*, *normm.m*, *numDims.m*, *parUnaFun.m*, *resampling.m*, *resPop.m*, *resSub.m*.
 
-NOTE 1: Exemplary data is provided in the dataset *x.mat* which contains the variables *x*: the distorted fMRI data, *Sequence*: one of the following 'FE' or 'SAFE', *EffectiveES*: effective inter-echo spacing (ms) for the provided FOV, *TE*: echo time or difference of echo times (ms), respectively for FE and SAFE, *voxsiz*: voxel size (mm) and factor to harmonize temporal dimension, *M* (optional): mask with area of interest for distortion correction. For runs without changing the paths, they should be placed in a folder
+NOTE 1: Example data is provided in the dataset *x.mat* which contains the variables *x*: the distorted fMRI data, *Sequence*: one of the following 'FE' or 'SAFE', *EffectiveES*: effective inter-echo spacing (ms) for the provided FOV, *TE*: echo time or difference of echo times (ms), respectively for FE and SAFE, *voxsiz*: voxel size (mm) and factor to harmonize temporal dimension, *M* (optional): mask with area of interest for distortion correction. For runs without changing the paths, they should be placed in a folder
 ###### ../fetalPhaseEPIData
 Data generated when running the example script is also stored in this folder as *resExp01.mat* which contains the variables *B*: the estimated field in Hz and *x*: the undistorted fMRI data.
 
